@@ -1,6 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/Gym Management System (1)/src/main/java" charset="UTF-8" />
-  </component>
-</project>
+
+package org.example;
+
+//helps bootstrap and launch the app
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpringbootHtmlApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(SpringbootHtmlApplication.class, args);
+    }
+
+}
