@@ -67,9 +67,10 @@ public class IndexController {
 
 
 	@GetMapping("/showFormPayment/{id}/{name}")
+	// Gets the customer ID from the URL and maps it to the id parameter
 	public String paymentForm(@PathVariable("id") int id,
-							  @PathVariable("name") String name,
-							  Model model){
+				 @PathVariable("name") String name,
+				 Model model){
 		Payment payment = new Payment();
 		payment.setCustomerId(id);
 		payment.setCustomerName(name);
