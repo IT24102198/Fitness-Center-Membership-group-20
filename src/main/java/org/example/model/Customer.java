@@ -100,21 +100,6 @@ public class Customer {
         this.height = height;
     }
 
-    public Date getMembershipStartDate() {
-        return membershipStartDate;
-    }
-
-    public void setMembershipStartDate(Date membershipStartDate) {
-        this.membershipStartDate = membershipStartDate;
-    }
-
-    public Date getMembershipEndDate() {
-        return membershipEndDate;
-    }
-
-    public void setMembershipEndDate(Date membershipEndDate) {
-        this.membershipEndDate = membershipEndDate;
-    }
 
     public String getStatus() {
         return status;
