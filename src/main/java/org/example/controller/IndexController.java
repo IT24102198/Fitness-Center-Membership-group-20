@@ -1,17 +1,15 @@
 package org.example.controller;
 
-import jakarta.servlet.ServletContext;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+
 import org.example.model.*;
 import org.example.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.xhtmlrenderer.pdf.ITextRenderer;
 
-import java.util.Date;
+
+
 import java.util.List;
 
 @Controller
