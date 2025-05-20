@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="fitness-center-membership-group-20:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/fitness_center_membership_group_20_war</output-path>
+    <root id="archive" name="fitness-center-membership-group-20_war.war" />
+  </artifact>
+</component>
