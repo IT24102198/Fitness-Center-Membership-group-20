@@ -1,16 +1,18 @@
-package Controller;
+package controller;
 
 import models.Payment;
 import utils.FileUtil;
 
+//Imports the Packages
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.*;
 
-
 @WebServlet("/PaymentServlet")
+// Allowing it to handle HTTP requests.
 public class PaymentServlet extends HttpServlet {
+    // Handles HTTP POST requests
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
@@ -26,14 +28,22 @@ public class PaymentServlet extends HttpServlet {
             return;
         }
 
-        Payment payment = new Payment(name, memberId, amount, mode, date);
+        // Create Payment object using setters
+        Payment payment = new Payment();
+        payment.setName(name);
+        payment.setMemberId(memberId);
+        payment.setAmount(amount);
+        payment.setMode(mode);
+        payment.setDate(date);
+
+        // Save Payment to File
         FileUtil.savePayment(payment.toFileString());
 
         // Store success message in session
         HttpSession session = request.getSession();
-        session.setAttribute("message", "Thank you, " + name + ". Your payment has been recorded.");
+        session.setAttribute("message", "Thank you, " + payment.getName() + ". Your payment has been recorded.");
 
-        // Forward to success.jsp to display the message
+        // Forward to success.jsp
         RequestDispatcher dispatcher = request.getRequestDispatcher("success.jsp");
         dispatcher.forward(request, response);
     }
