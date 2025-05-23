@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.*;
 
+//HTTP request to the URL
 @WebServlet("/PaymentServlet")
 // Allowing it to handle HTTP requests.
 public class PaymentServlet extends HttpServlet {
