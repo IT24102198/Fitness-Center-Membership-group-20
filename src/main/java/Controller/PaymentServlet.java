@@ -11,7 +11,7 @@ import java.io.*;
 
 //HTTP request to the URL
 @WebServlet("/PaymentServlet")
-// Allowing it to handle HTTP requests.
+// Allowing it to handle HTTP requests  I.
 public class PaymentServlet extends HttpServlet {
     // Handles HTTP POST requests
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -29,7 +29,7 @@ public class PaymentServlet extends HttpServlet {
             return;
         }
 
-        // Create Payment object using setters
+        // Create Payment object using setters A
         Payment payment = new Payment();
         payment.setName(name);
         payment.setMemberId(memberId);
@@ -37,7 +37,7 @@ public class PaymentServlet extends HttpServlet {
         payment.setMode(mode);
         payment.setDate(date);
 
-        // Save Payment to File
+        // Save Payment to File D
         FileUtil.savePayment(payment.toFileString());
 
         // Store success message in session
